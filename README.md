@@ -21,7 +21,7 @@ stored.
 P
 ## PROGRAM - ARP
 ## Client Program:
-
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',8000))
@@ -44,13 +44,13 @@ while True:
     ip=input("Enter logical address: ")
     s.send(ip.encode())
     print("MAC Address",s.recv(1024).decode())
-
+```
 ## OUPUT - ARP
 ![Screenshot 2024-03-04 143614](https://github.com/22008837/2c.ARP_RARP_PROTOCOLS/assets/120194155/13431fa8-4ab9-42fb-af83-ad3167508459)
 
 ## PROGRAM - RARP
 ## Client Progam:
-
+```
 import socket
 s=socket.socket()
 s.bind(('localhost',9000))
@@ -73,7 +73,7 @@ while True:
     ip=input("Enter mac address: ")
     s.send(ip.encode())
     print("Logical address",s.recv(1024).decode())
-
+```
 ## OUPUT -RARP
 ![Screenshot 2024-02-26 144916](https://github.com/22008837/2c.ARP_RARP_PROTOCOLS/assets/120194155/862e4d5a-9916-49ce-ae40-5047309c303d)
 
